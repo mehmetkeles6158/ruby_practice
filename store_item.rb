@@ -66,21 +66,13 @@ class Item
 
 end
 
-item1 = Item.new(item_id: 11, item_name: "IZZE" , item_price:1.99 , item_stock: true )
+item1 = Item.new(item_id:11, item_name:"IZZE" , item_price:1.99 , item_stock: true )
 
-# item1.print_info
+item1.print_info
 
-# item1.item_id = 22
-
-# p item1.item_id
-
-# item1.print_info
-
-# item1.item_price = 2.99
-
-# item1.print_info
-
-p item1.tax_price
+item1.item_id = 01
+item1.item_price = 2.99
+item1.tax_price
 
 item1.print_info
 
