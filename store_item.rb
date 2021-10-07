@@ -43,11 +43,9 @@ class Item
 
 
   #getter/reader methods
-
   attr_reader :item_id, :item_name, :item_price, :item_stock
   #setter/writer methods
   attr_writer :item_id, :item_name, :item_price, :item_stock
-
 
   def initialize(input_options)
     @item_id = input_options[:item_id]
@@ -62,19 +60,18 @@ class Item
 
   def tax_price
     @item_price *= 1.08
+    
   end
 
 end
 
 item1 = Item.new(item_id:11, item_name:"IZZE" , item_price:1.99 , item_stock: true )
-
 item1.print_info
 
 item1.item_id = 01
 item1.item_price = 2.99
-item1.tax_price
-
-item1.print_info
+(item1.tax_price).round(2)
+p item1.print_info + " after new price and tax"
 
 
 
