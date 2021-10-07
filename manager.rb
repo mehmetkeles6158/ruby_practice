@@ -21,8 +21,6 @@ end
 p employee1 = Employee.new({first_name: "Majora", last_name: "Carter", salary: 80000, active: true})
 employee2 = Employee.new(first_name: "Danilo", last_name: "Campos", salary: 70000, active: true)
 employee1.print_info
-employee1. give_annual_raise
-employee1.print_info
 employee2.print_info
 
 class Manager < Employee
@@ -63,7 +61,7 @@ manager.fire_all_employees
 p employee1
 p employee2
 
-  manager.give_all_raises
+manager.give_all_raises
 p employee1
 p employee2
 
