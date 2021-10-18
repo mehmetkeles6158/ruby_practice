@@ -1,0 +1,33 @@
+
+arr = [2, 11, 5 , 3]
+
+output => 330
+
+def multiply_all
+x = 1
+arr.each do |num|
+  num = num * x
+end
+
+return num
+
+end
+
+###
+
+arr = [2, 11, 5 , 3, 21, 34, 55]
+
+outcome => 2 , 3
+
+
+def first_two(arr)
+
+first_two = []
+first_two = arr.sort
+
+first_item = arr.sort[0]
+second_item = arr.sort[1]
+
+end
+
+
