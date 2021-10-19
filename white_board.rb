@@ -53,3 +53,27 @@ end
 
 reverse([1,2,3,4])
 
+#8) Write a function that takes in an array of numbers and returns a count of how many zeros are in the array.
+
+#input => arr = [0,2,30,110,33,45,50,19,200]
+#output => 6
+
+def count_zeros (arr)
+
+  list = []
+  i = 0
+  total_zeros = 0
+  arr.each do |num|
+    list << num.to_s
+    n = list[i].chars.count("0") 
+    total_zeros = total_zeros + n
+    i += 1
+  end
+
+  return total_zeros
+
+end
+
+p count_zeros([0,2,30,110,33,45,50,19,200])
+
+
