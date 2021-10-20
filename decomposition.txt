@@ -1,0 +1,16 @@
+Assignment:
+• One of the other developers in your company has created a map to show where all the addresses are on a google map. But, she needs the data to be computer/search friendly, and instead of adding an address column, add two attributes called “latitude” and “longitude.” Use the float datatype. 
+
+• Bonus: Update (or create if you haven’t already) the frontend option that users use to input their address details. Instead of saving the address directly like before, have the controller convert the address to latitude and longitude. To do this you’ll need to: (edited) 
+
+
+
+
+
+- First add latitude and longitude columns and make it type float
+
+- Create a method convert lat/ long into address 
+
+- Maybe use google map API to get addresses by getting HTTP request
+
+- https://developers.google.com/maps/documentation/geocoding/overview

@@ -1,2 +1,0 @@
-# First round, score for how many pins fell down ( First condition) or a strike(10 points) ( what is score for that.) or none pins fell down score is zero.
-# Second round ( 1 round' score + score(how many pins fell down)) or other option spare.
