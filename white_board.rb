@@ -77,3 +77,14 @@ end
 p count_zeros([0,2,30,110,33,45,50,19,200])
 
 
+#9) Write a function that takes in an array of numbers and returns true if all the numbers are bigger than 10, otherwise returns false.
+
+def greater10(array)
+
+  array.all?{|item| item > 10}
+
+end
+arr1 = [11,12,13,14]
+p greater10(arr1)
+
+
