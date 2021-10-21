@@ -87,4 +87,25 @@ end
 arr1 = [11,12,13,14]
 p greater10(arr1)
 
+# 10) Write a function that takes in an array of words and returns the number of times the letter “a” appeared in total.
+
+# outcome => array = ["apple","orange",banana"]
+# input => 5
+
+# - count how many times does "a" appear in its string?
+# and add all apperances together
+
+def counta(array)
+  total_a = 0
+  array.each do |word|
+    n = word.chars.count("a")
+    total_a = n + total_a
+  end
+  p total_a
+end
+
+ counta(["apple","orange","banana"])
+
+
+
 
