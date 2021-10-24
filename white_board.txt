@@ -30,4 +30,59 @@ second_item = arr.sort[1]
 
 end
 
+-- Longest substring ---
+inputs “cat”, “has”
+output “a”
+inputs “together” “bothersome”
+output “ther”
+inputs “qpwoeiruoasdhfkjas”
+“haoiwuefhiua”
+
+
+- Find out chars of words into their arrays(chars method)
+
+- Figure out common chars of two words by iterating through arrays or use some build-in functions
+- Maybe we can put these chars in a new array.
+
+- Connect common chars into string by using join method
+
+- And return that string
+
+
+Write a function that takes in an array of numbers and returns all the pairs that add up to 10.
+
+input -> nums = [ 3, 1, 2, 7 , 8]
+
+output -> (3,7) and (2,8)(return nums in a hash)
+
+
+i = 1
+pairs = {}
+nums.each do |num|
+if num + nums[i] = 10
+
+pairs[num] = arr[i]
+end
+
+end
+
+i += 1
+
+end
+
+
+frequent_word = {}
+
+
+words.each do |word|
+
+   if frequent_word[word]
+
+    frequent_word[word] += 1
+
+   else
+
+    frequent_word[word] = 1
+
+end
 
