@@ -1,0 +1,1 @@
+GET https://newsapi.org/v2/top-headlines?country=us&category=health&apiKey=165d916fe45f481a96219b4236309a75
