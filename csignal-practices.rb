@@ -60,3 +60,29 @@ final << sum2
 
 p final
 end
+
+# Given a rectangular matrix of characters, add a border of asterisks(*) to it.
+# Example
+# For
+# picture = ["abc",
+#            "ded"]
+# the output should be
+
+# solution(picture) = ["*****",
+#                       "*abc*",
+#                       "*ded*",
+#                       "*****"]
+
+def solution(picture)
+  picture.each do|element|
+    element.insert(0, "*")
+    element.insert(-1, "*")
+  end
+  
+  n = picture[0].chars.count
+  picture.insert(0, '*'*n)
+  picture.insert(-1, '*'*n)
+  
+  p picture
+  
+end
