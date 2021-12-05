@@ -254,3 +254,95 @@ def solution(n)
   p sum
   
 end
+
+
+# Let's say a triple (a, b, c) is a zigzag if either a < b > c or a > b < c.
+
+# Given an array of integers numbers, your task is to check all the triples of its consecutive elements for being a zigzag. More formally, your task is to construct an array of length numbers.length - 2, where the ith element of the output array equals 1 if the triple (numbers[i], numbers[i + 1], numbers[i + 2]) is a zigzag, and 0 otherwise.
+
+# Example
+
+# For numbers = [1, 2, 1, 3, 4], the output should be solution(numbers) = [1, 1, 0].
+
+# (numbers[0], numbers[1], numbers[2]) = (1, 2, 1) is a zigzag, because 1 < 2 > 1;
+# (numbers[1], numbers[2] , numbers[3]) = (2, 1, 3) is a zigzag, because 2 > 1 < 3;
+# (numbers[2], numbers[3] , numbers[4]) = (1, 3, 4) is not a zigzag, because 1 < 3 < 4;
+# For numbers = [1, 2, 3, 4], the output should be solution(numbers) = [0, 0];
+
+# Since all the elements of numbers are increasing, there are no zigzags.
+
+# For numbers = [1000000000, 1000000000, 1000000000], the output should be solution(numbers) = [0].
+
+# Since all the elements of numbers are the same, there are no zigzags.
+
+
+def solution(numbers)
+  i = 0
+  final = []
+  while i < numbers.length - 2
+     if numbers[i] < numbers[i+1] && numbers[i+1] > numbers[i+2]
+        final << 1
+        elsif numbers[i] > numbers[i+1] && numbers[i+1] < numbers[i+2]
+        final << 1
+        else
+        final << 0
+     end
+  
+     i += 1
+  end
+  
+  p final
+  
+end
+
+
+# You are given a string s. Your task is to count the number of ways of splitting s into three non-empty parts a, b and c (s = a + b + c) in such a way that a + b, b + c and c + a are all different strings.
+
+# NOTE: + refers to string concatenation.
+
+# Example
+
+# For s = "xzxzx", the output should be solution(s) = 5.
+
+# Consider all the ways to split s into three non-empty parts:
+
+# If a = "x", b = "z" and c = "xzx", then all a + b = "xz", b + c = "zxzx" and c + a = xzxx are different.
+# If a = "x", b = "zx" and c = "zx", then all a + b = "xzx", b + c = "zxzx" and c + a = zxx are different.
+# If a = "x", b = "zxz" and c = "x", then all a + b = "xzxz", b + c = "zxzx" and c + a = xx are different.
+# If a = "xz", b = "x" and c = "zx", then a + b = b + c = "xzx". Hence, this split is not counted.
+# If a = "xz", b = "xz" and c = "x", then all a + b = "xzxz", b + c = "xzx" and c + a = xxz are different.
+# If a = "xzx", b = "z" and c = "x", then all a + b = "xzxz", b + c = "zx" and c + a = xxzx are different.
+# Since there are five valid ways to split s, the answer is 5.
+
+
+# You are given two integer arrays a and b of the same length.
+
+# Let's define the difference between a and b as the sum of absolute differences of corresponding elements:
+
+# difference = |a[0] - b[0]| + |a[1] - b[1]| + ... + |a[a.length - 1] - b[b.length - 1]|
+# You can replace one element of a with any other element of a. Your task is to return the minimum possible difference between a and b that can be achieved by performing at most one such replacement on a. You can also choose to leave the array intact.
+
+# Example
+
+# For a = [1, 3, 5] and b = [5, 3, 1], the output should be solution(a, b) = 4.
+
+# If we leave the array a intact, the difference is |1 - 5| + |3 - 3| + |5 - 1| = 8;
+# If we replace a[0] with a[1], we get a = [3, 3, 5] and the difference is |3 - 5| + |3 - 3| + |5 - 1| = 6;
+# If we replace a[0] with a[2], we get a = [5, 3, 5] and the difference is |5 - 5| + |3 - 3| + |5 - 1| = 4;
+# If we replace a[1] with a[0], we get a = [1, 1, 5] and the difference is |1 - 5| + |1 - 3| + |5 - 1| = 10;
+# If we replace a[1] with a[2], we get a = [1, 5, 5] and the difference is |1 - 5| + |5 - 3| + |5 - 1| = 10;
+# If we replace a[2] with a[0], we get a = [1, 3, 1] and the difference is |1 - 5| + |3 - 3| + |1 - 1| = 4;
+# If we replace a[2] with a[1], we get a = [1, 3, 3] and the difference is |1 - 5| + |3 - 3| + |3 - 1| = 6;
+# So the final answer is 4, since it's the minimum possible difference.
+
+def solution(a, b)
+  difference = []
+  sum = 0
+  a.each do |num1|
+    b.each do |num2|
+      sum = sum + (num2 - num1).abs()
+      difference << sum
+    end
+  end
+  p difference.sort[0]
+end
