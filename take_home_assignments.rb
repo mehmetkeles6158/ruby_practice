@@ -19,3 +19,8 @@
 # We prefer Ruby or Python, but you may use any language.
 
 string = "Make a killer impression on whoever you're meeting."
+
+# figure out to get each word and store them in array.
+words = string.split(/\W+/)
+
+p words
