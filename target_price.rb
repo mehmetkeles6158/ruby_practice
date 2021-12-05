@@ -22,4 +22,4 @@
 require 'csv'
 target_prices = CSV.read("target_price.csv")
 
-p target_prices[0][1].to_i
+p target_prices[1][1].delete('$').to_f

@@ -228,3 +228,29 @@ end
 # words[1] = "babc" is a 2-occurrence of sequence, because sequence[1..8] = "babcbabc";
 # words[1] = "babc" is not a 3-occurence of sequence, because there is no substring "babcbabcbabc" in sequence;
 # words[2] = "bca" is a 0-occurrence of sequence, because there is no substring "bca" in sequence.
+
+
+#---------------------------------------------------
+# You are given a two-digit integer n. Return the sum of its digits.
+
+# Example
+
+# For n = 29, the output should be
+# solution(n) = 11.
+
+def solution(n)
+  arr = n.to_s.chars
+  digits = []
+  
+  arr.each do |char|
+    digits << char.to_i
+  end
+  
+  sum = 0
+  digits.each do |digit|
+   sum = sum + digit
+  end
+  
+  p sum
+  
+end
