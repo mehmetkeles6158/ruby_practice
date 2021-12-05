@@ -22,5 +22,13 @@ string = "Make a killer impression on whoever you're meeting."
 
 # figure out to get each word and store them in array.
 words = string.split(/\W+/)
-
 p words
+
+#loop through array and try to print next two words everytime
+
+i = 0
+
+while i < words.length
+  p words [i] + " " + words[i+1]
+  i += 1
+end
