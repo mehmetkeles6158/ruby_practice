@@ -9,17 +9,15 @@ def breakingRecords(scores)
   while i < scores.length
       if scores[i] > highest
         highest = scores[i]
-        solution[0] += solution[0]
         count1 += 1
-        solution[0] << count
       elsif scores[i] < lowest
         lowest = scores[i]
         count2 += 1
-        solution[1] << count2
       end
       i+= 1
   end
-
+  solution << count1
+  solution << count2
   p solution
 
 end
