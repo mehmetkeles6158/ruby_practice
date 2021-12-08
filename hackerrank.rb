@@ -56,8 +56,10 @@ p breakingRecords(s)
 
 def birthday(s, d, m)
   # Write your code here
-
   count = 0
+  if s.length == 1
+    count = 1
+  end
   i = 0 
   while i < s.length-1
     if s[i] + s[i+1] == d
