@@ -76,19 +76,37 @@
 
 # p birthday(s, d, m)
 
-# --------Find a number------------#
-def findNumber(arr, k)
+# # --------Find a number------------#
+# def findNumber(arr, k)
+#   # Write your code here
+  
+#   arr.each do |num|
+#     if k == num
+#       return "YES"
+#     end
+#     if k != num
+#       return "NO"
+#     end
+#   end
+
+# end
+
+# findNumber([1,2,3],2)
+
+#---------------------print odd numbers-----------
+
+def oddNumbers(l, r)
   # Write your code here
   
-  arr.each do |num|
-    if k == num
-      return "YES"
+  while l < r
+    if l % 2 == 1 
+      p l
+    else
+      p l + 1
     end
-    if k != num
-      return "NO"
-    end
+    l += 2
   end
-
+  
 end
 
-findNumber([1,2,3],2)
+oddNumbers(2,5)
