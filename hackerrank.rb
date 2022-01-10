@@ -95,18 +95,46 @@
 
 #---------------------print odd numbers-----------
 
-def oddNumbers(l, r)
+# def oddNumbers(l, r)
+#   # Write your code here
+  
+#   while l < r
+#     if l % 2 == 1 
+#       p l
+#     else
+#       p l + 1
+#     end
+#     l += 2
+#   end
+  
+# end
+
+# oddNumbers(2,5)
+
+
+#----------------------plusMinus----------------------
+
+def plusMinus(arr)
   # Write your code here
-  
-  while l < r
-    if l % 2 == 1 
-      p l
+  count_1= 0;
+  count_2= 0;
+  count_3= 0;
+  n  = arr.length;
+  arr.each do |num|
+    if num > 0
+      count_1 += 1
+    elsif num < 0
+      count_2 += 1
     else
-      p l + 1
+      count_3 +=1
     end
-    l += 2
   end
-  
+    
+  p count_1.to_f / n.to_f
+  p count_2.to_f / n.to_f
+  p count_3.to_f / n.to_f
+
 end
 
-oddNumbers(2,5)
+
+plusMinus([1,1,-1,-1,0,1])
