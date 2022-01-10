@@ -114,27 +114,57 @@
 
 #----------------------plusMinus----------------------
 
-def plusMinus(arr)
-  # Write your code here
-  count_1= 0;
-  count_2= 0;
-  count_3= 0;
-  n  = arr.length;
-  arr.each do |num|
-    if num > 0
-      count_1 += 1
-    elsif num < 0
-      count_2 += 1
-    else
-      count_3 +=1
-    end
-  end
+# def plusMinus(arr)
+#   # Write your code here
+#   count_1= 0;
+#   count_2= 0;
+#   count_3= 0;
+#   n  = arr.length;
+#   arr.each do |num|
+#     if num > 0
+#       count_1 += 1
+#     elsif num < 0
+#       count_2 += 1
+#     else
+#       count_3 +=1
+#     end
+#   end
     
-  p count_1.to_f / n.to_f
-  p count_2.to_f / n.to_f
-  p count_3.to_f / n.to_f
+#   p count_1.to_f / n.to_f
+#   p count_2.to_f / n.to_f
+#   p count_3.to_f / n.to_f
+
+# end
+
+# plusMinus([1,1,-1,-1,0,1])
+
+
+#-----------------------min and max SUM ------------------------------------
+
+def miniMaxSum(arr)
+  # Write your code here
+  # find max number and subtract from sum to get min sum
+  # find min number and subtract from sum to get max sum
+  
+  maxNum = arr[0]
+  miniNum = arr[0]
+  sum = 0
+  arr.each do |num|
+      if num > maxNum
+          maxNum = num
+      end
+      
+      if num < miniNum
+          miniNum = num
+      end
+      
+      sum = sum + num
+  end
+  
+  minSum = sum - maxNum
+  maxSum = sum - miniNum
+  
+  puts minSum.to_s + " " + maxSum.to_s
 
 end
 
-
-plusMinus([1,1,-1,-1,0,1])
