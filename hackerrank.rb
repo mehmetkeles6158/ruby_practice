@@ -193,32 +193,45 @@
 
 #---------------------------- migratoryBirds --------------------------------
 
-def migratoryBirds(arr)
+# def migratoryBirds(arr)
   # Write your code here
   # find frenquency of nums in array first
   
-  frequent_nums = {}
+#   frequent_nums = {}
   
-  arr.each do |num|
-      if frequent_nums[num]
-          frequent_nums[num] += 1
-      else
-          frequent_nums[num] = 1
-      end
-  end
+#   arr.each do |num|
+#       if frequent_nums[num]
+#           frequent_nums[num] += 1
+#       else
+#           frequent_nums[num] = 1
+#       end
+#   end
   
-  max_value = frequent_nums.values[0]
-  max_frequent_keys= []
-  frequent_nums.each do |k,v|
-    if v > max_value
-       max_frequent_keys << k
+#   max_value = frequent_nums.values[0]
+#   max_frequent_keys= []
+#   frequent_nums.each do |k,v|
+#     if v > max_value
+#        max_frequent_keys << k
 
-    end
+#     end
+#   end
+
+#   p max_frequent_keys[0]
+# end
+
+# migratoryBirds([1, 4, 4, 4, 5 , 3])
+
+#-----------------------------day of programmer----------------------------
+
+def dayOfProgrammer(year)
+  # Write your code here
+  
+  if year % 4 == 0 || year % 400 == 0 && year % 100 != 0
+      return "12.09.#{year}"
+  else
+      return "13.09.#{year}"
   end
 
-  p max_frequent_keys[0]
 end
-
-migratoryBirds([1, 4, 4, 4, 5 , 3])
 
 
