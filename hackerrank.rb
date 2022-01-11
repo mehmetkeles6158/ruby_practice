@@ -141,30 +141,84 @@
 
 #-----------------------min and max SUM ------------------------------------
 
-def miniMaxSum(arr)
-  # Write your code here
-  # find max number and subtract from sum to get min sum
-  # find min number and subtract from sum to get max sum
+# def miniMaxSum(arr)
+#   # Write your code here
+#   # find max number and subtract from sum to get min sum
+#   # find min number and subtract from sum to get max sum
   
-  maxNum = arr[0]
-  miniNum = arr[0]
-  sum = 0
+#   maxNum = arr[0]
+#   miniNum = arr[0]
+#   sum = 0
+#   arr.each do |num|
+#       if num > maxNum
+#           maxNum = num
+#       end
+      
+#       if num < miniNum
+#           miniNum = num
+#       end
+      
+#       sum = sum + num
+#   end
+  
+#   minSum = sum - maxNum
+#   maxSum = sum - miniNum
+  
+#   puts minSum.to_s + " " + maxSum.to_s
+
+# end
+
+
+# def divisibleSumPairs(n, k, arr)
+#   # Write your code here
+#   i = 0
+#   j = i + 1
+#   # count = 0
+#   while i < n
+#     while j < n
+#       # if (arr[i] + arr[j]) % k == 0
+#       #     count += 1
+#       # end
+#       p arr[i] + arr[j]
+      
+#       j += 1
+#     end
+#     i += 1
+#   end
+#   # p count
+# end
+
+# divisibleSumPairs(4,2,[2,3,5,8])
+
+
+#---------------------------- migratoryBirds --------------------------------
+
+def migratoryBirds(arr)
+  # Write your code here
+  # find frenquency of nums in array first
+  
+  frequent_nums = {}
+  
   arr.each do |num|
-      if num > maxNum
-          maxNum = num
+      if frequent_nums[num]
+          frequent_nums[num] += 1
+      else
+          frequent_nums[num] = 1
       end
-      
-      if num < miniNum
-          miniNum = num
-      end
-      
-      sum = sum + num
   end
   
-  minSum = sum - maxNum
-  maxSum = sum - miniNum
-  
-  puts minSum.to_s + " " + maxSum.to_s
+  max_value = frequent_nums.values[0]
+  max_frequent_keys= []
+  frequent_nums.each do |k,v|
+    if v > max_value
+       max_frequent_keys << k
 
+    end
+  end
+
+  p max_frequent_keys[0]
 end
+
+migratoryBirds([1, 4, 4, 4, 5 , 3])
+
 
