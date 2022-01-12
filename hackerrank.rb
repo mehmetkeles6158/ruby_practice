@@ -223,13 +223,43 @@
 
 #-----------------------------day of programmer----------------------------
 
-def dayOfProgrammer(year)
-  # Write your code here
+# def dayOfProgrammer(year)
+#   # Write your code here
   
-  if year % 4 == 0 || year % 400 == 0 && year % 100 != 0
-      return "12.09.#{year}"
+#   if year % 4 == 0 || year % 400 == 0 && year % 100 != 0
+#       return "12.09.#{year}"
+#   else
+#       return "13.09.#{year}"
+#   end
+
+# end
+
+
+#----------------------------------- bonAppetit ----------------------------
+
+def bonAppetit(bill, k, b)
+  # Write your code here
+  #1) use build-in function to avoid certain index from the array to store other values in a new array.
+      # - google it for this built-in function(.delete_at).
+      bill.delete_at(k)
+  #2) Find sum of remaining costs and divide by 2
+       #-> loop through new array to get sum of values.
+       sum = 0
+       bill.each do |num|
+          sum = sum + num
+       end
+       
+       shared_bill = sum / 2
+       
+          
+  # 3) write if statements to check conditions to get expected output
+  #    - if b is equal to my calculation it says "Bon Appetit"
+  #    - otherwise it gives refund amount.
+  
+  if shared_bill == b
+      puts "Bon Appetit"
   else
-      return "13.09.#{year}"
+      p b - shared_bill
   end
 
 end
